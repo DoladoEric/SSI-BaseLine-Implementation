@@ -1,0 +1,24 @@
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+packaging
+lightning
+numpy
+scipy
+torchmetrics
+transformers
+wandb
+tensorboard
+einops
+hydra-core
+jsonargparse
+phonemizer
+local-attention
+causal-conv1d>=1.2.0
+mamba-ssm
+# flashlight-text
+# flashlight-textkenlm
+samplerate
+gdown
+deep-phonemizer
+wget
