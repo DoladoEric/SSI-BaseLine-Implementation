@@ -1,5 +1,5 @@
 # about
-This is a model that convert EGG signal to text for the task of decoding silent speech (for the [Brain-to-text '24](https://eval.ai/web/challenges/challenge-page/2099/overview) competetion).
+This is a model that convert EGG signal to text for the task of silent speech  Integeration for the Final Project of CMU 11785
 
 # architecture
 ### feature extractor:
@@ -27,4 +27,4 @@ then using the CTC decoder with the 4-gram kenlm model provide by the PyTorch [t
 14th place!. Which is quite obvious since there's just me working on this project. There are still multiple ideas i could try but since free time is quite limited as a college student so if someone is interested, you could fork this project. 
 # work in progress
 * use additional corpus: inspired by the GAN network, basically train a separate encoder that project text into the same latent space as the output of the encoder by making the decoder (with gradient off) ouput the disired text. then a second decoder is train with the second enocder ouput (detached). In theory, the decoder should learn how to spell better due to the addtional data but in practice the second loss converge way too fast before anything of use was learn, so tunning the loss weight could work. There should be a (not) working prototype of this idea in the `src` folder.
-* mask word: use a trained neural decoder to algin the text label to the neural recording. Then, in each training step we mask a work and its associate spikepower region. It should force the model to predict a word without relying on the context.
+* in context Learning: We are working on Utilizing in-context Learning method to further improve our finetune method for LISA(Large Language Model Integrated Score Adjustment)
